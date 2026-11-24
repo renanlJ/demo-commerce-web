@@ -1,0 +1,11 @@
+.git
+.github
+docs
+deploy/kubernetes
+node_modules
+dist
+coverage
+test-results
+Dockerfile
+.dockerignore
+*.md

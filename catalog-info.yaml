@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-commerce-web
+  description: >
+    Storefront frontend (React + Vite). Displays the product catalog,
+    details, reviews and ratings; talks exclusively to demo-product-api.
+  tags:
+    - demo-commerce
+    - lang-typescript
+    - framework-react
+    - app-frontend
+    - criticality-high
+    - runtime-browser
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  lifecycle: production
+  owner: group:default/platform-team
+  system: demo-commerce
+  consumesApis:
+    - product-api
+  dependsOn:
+    - component:demo-product-api

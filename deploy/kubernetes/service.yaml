@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-commerce-web
+  labels:
+    app: demo-commerce-web
+    system: demo-commerce
+spec:
+  type: ClusterIP
+  selector:
+    app: demo-commerce-web
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http

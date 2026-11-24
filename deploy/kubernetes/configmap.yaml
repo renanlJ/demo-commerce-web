@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-commerce-web
+  labels:
+    app: demo-commerce-web
+    system: demo-commerce
+data:
+  # Upstream for the nginx /api/ reverse proxy (Kubernetes DNS).
+  PRODUCT_API_URL: http://demo-product-api:3000
